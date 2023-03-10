@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="container__movies">
+    <div *ngFor="let movie of movies" class="container__movies--moviecard">
+      <img *ngIf="movie.posterPath" src="https://image.tmdb.org/t/p/w300/{{movie.posterPath}}" class="container__movies--moviecard__card-img-top">
+        <img *ngIf="!movie.posterPath" src="https://www.genesisglobalschool.edu.in/wp-content/uploads/2016/09/noimage.jpg" class="card-img-top">
+      <div class="container__movies--moviecard__body">
+        <h5 class="moviecard__title">{{movie.title}}</h5>
+        <button class="details-button"[routerLink]="['/details',movie.id]">
+          Details
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

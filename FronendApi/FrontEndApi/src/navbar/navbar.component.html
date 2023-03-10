@@ -1,0 +1,19 @@
+<nav>
+  <h2 class="logo">&#10063; MoviesWeb
+
+  </h2>
+
+
+    <ul>
+      <li>
+        <form class="nav">
+          <input class="nav-search" type="search" placeholder="Title" #searchPhrase aria-label="search">
+          <button class="nav-submit" type="submit" (click)="searchMovie(searchPhrase.value)">Search movie</button>
+        </form>
+      </li>
+      <li><a [routerLink]="['main']">Home </a></li>
+      <li><a [routerLink]="['Recommended']">Recommended </a></li>
+
+    </ul>
+
+</nav>

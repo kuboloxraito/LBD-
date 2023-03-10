@@ -1,0 +1,23 @@
+<div *ngIf="isReady"class="container">
+  <div class="helper">
+    <h1 class="title">{{details.title}}</h1>
+    <h2 class="nd-title">Original Title: <br>{{details.originalTitle}}</h2>
+    <img  *ngIf="details.posterPath" class="card-img-top" src="https://image.tmdb.org/t/p/original/{{details.posterPath}}" alt="Card image cap">
+    <img class="card-img-top"  *ngIf="!details.posterPath" src="https://www.genesisglobalschool.edu.in/wp-content/uploads/2016/09/noimage.jpg" alt="Card image cap">
+  </div>
+  <div class="detailer">
+    <h3>Overview</h3>
+
+
+    <p>{{details.overview}}</p>
+    <div class="details-helper">
+      <!-- <div class="genre" *ngFor="let genre of details.genreIds">{{genre.number}}</div> -->
+      <div class="pop">Popularity:{{details.popularity}}</div>
+      <div class="rel">Release Date:{{details.releaseDate}} </div>
+   </div>
+   <button class="gob" (click)="goBack()" role="button">Go Back</button>
+  </div>
+
+
+
+</div>
